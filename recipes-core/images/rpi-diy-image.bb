@@ -4,3 +4,7 @@ include recipes-core/images/core-image-base.bb
 IMAGE_FEATURES += '\
     ssh-server-openssh \
     '
+
+IMAGE_INSTALL += '\
+    rust-server \
+    '
