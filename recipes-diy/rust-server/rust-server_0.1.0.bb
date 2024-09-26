@@ -8,10 +8,10 @@ inherit cargo
 # how to get rust-server could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/rust-server/0.1.0"
 SRC_URI += "git://git@github.com/hen3u/opcua-server.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "3eec803650489ecac103fbd09d9018747709e987"
+SRCREV = "cdd43bac94ccb607aadebf5335316c15f29d027e"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+3eec803650"
+PV:append = ".AUTOINC+cdd43bac94"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
