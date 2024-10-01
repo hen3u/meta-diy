@@ -1,10 +1,6 @@
-# Base this image on core-image-base
-include recipes-core/images/core-image-base.bb
+inherit core-image
 
-IMAGE_FEATURES += '\
-    ssh-server-openssh \
-    '
+IMAGE_FEATURES += "splash"
+IMAGE_FEATURES += "ssh-server-openssh"
 
-IMAGE_INSTALL += '\
-    rust-server \
-    '
+IMAGE_INSTALL:append = " rust-server"
