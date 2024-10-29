@@ -11,6 +11,12 @@ RDEPENDS:${PN} += "\
 
 LICENSE = "MIT"
 
+do_install:append() {
+        install -d ${D}${bindir}
+        install -m 0755 ${S}/server.conf ${D}${bindir}
+        install -m 0755 ${S}/log4rs.yaml ${D}${bindir}
+}
+
 SRC_URI[addr2line-0.21.0.sha256sum] = "8a30b2e23b9e17a9f90641c7ab1549cd9b44f296d3ccbf309d2863cfe398a0cb"
 SRC_URI[adler-1.0.2.sha256sum] = "f26201604c87b1e01bd3d98f8d5d9a8fcbb815e8cedb41ffccbeb4bf593a35fe"
 SRC_URI[aho-corasick-1.1.3.sha256sum] = "8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916"
